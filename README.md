@@ -1,7 +1,12 @@
-Hey There!
+<p align="center">
+  <img src="cover.png" alt="Portfolio Banner" width="100%" />
+</p>
 
-This repo is a showcase of my Portfolio/Project Website which I made to showcase my IT Project. 
-Feel Free to have a look at the code, fonts, Images, and the website itself viratportfolio.com and please suggest some suggestions and your valuable feedback.
+# Hey There 👋
 
-        
-![Portfolio Banner](images/cover.png)
+This repo is a showcase of my **Portfolio/Project Website** which I made to showcase my IT Project.
+
+Feel free to:
+- Explore the code, fonts, images
+- Visit the live site: [viratportfolio.com](https://viratportfolio.com)
+- Share your valuable feedback and suggestions 🙌
