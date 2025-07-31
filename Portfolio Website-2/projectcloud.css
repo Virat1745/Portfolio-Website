@@ -1,0 +1,331 @@
+/* ========== IMPORT FONT ========== */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
+
+body {
+  font-family: 'Playfair Display', serif;
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* ========== HERO SECTION ========== */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+background: url('projectcloud.jpg') center/cover no-repeat;
+  filter: blur(2px) brightness(0.6);
+  transform: scale(1.1);
+  z-index: 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 100%; /* Start below screen */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+   animation: filmSlideUp 0.8s ease-in-out forwards;
+}
+
+@keyframes filmSlideUp {
+  0% { top: 100%; }
+  50% { top: 0%; }
+  100% { top: 0%; } /* Slide up and disappear */
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 0;
+  z-index: 2;
+}
+
+.hero-text.show-text {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+.hero-text h1, .hero-text p {
+  font-family: 'Playfair Display', serif;
+  color: white;
+}
+
+.hero-text h1 {
+  font-size: 4rem;
+  letter-spacing: 4px;
+}
+
+.hero-text p {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  letter-spacing: 2px;
+}
+
+/* ========== FEATURES SECTION ========== */
+/* Tip Button Styling */
+.hover-tip {
+  display: inline-block;
+  background-color: #111;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  margin: 0 auto 2rem;
+  animation: bounce 1s infinite;
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.features {
+  padding: 5rem 2rem;
+  width: 100%;
+}
+
+.features-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5rem;
+  flex-wrap: wrap;
+}
+
+.features-list-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.features-list-wrapper h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.divider {
+  width: 60px;
+  height: 3px;
+  background: #ffffff;
+  margin-bottom: 2rem;
+  border-radius: 2px;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 300px;
+}
+
+.feature-item {
+  font-size: 1.2rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid white;
+  cursor: pointer;
+  transition: color 0.3s;
+  text-align: left;
+}
+
+.feature-item:hover {
+  color: #ff6ec4;
+  transform: scale(1.03);
+}
+
+.feature-preview-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  width: 300px;
+}
+
+.feature-preview-container img {
+  width: 100%;
+  max-width: 1080px;       /* enlarged size */
+  height: auto;
+  border-radius: 10px;
+  opacity: 0;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease;
+}
+
+
+/* ========== SCREENSHOTS ========== */
+.screenshots {
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.screenshot-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.screenshots img {
+  width: 300px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.4s;
+}
+
+.screenshots img:hover {
+  transform: scale(1.05);
+}
+
+/* ========== ROTATING OBJECT ========== */
+.rotating-object {
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.rotating-object img {
+  width: 200px;
+  height: auto;
+  transition: transform 0.3s ease-out;
+  will-change: transform;
+}
+
+/* ========== TECH STACK ========== */
+/* TECH STACK SECTION - updated */
+.tech-stack {
+  padding: 5rem 2rem 3rem;
+  text-align: center;
+  position: relative;
+  background: #000;
+}
+
+.object-background {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  margin-bottom: 2rem;
+}
+
+.object-background img {
+  width: 280px;
+  height: auto;
+  opacity: 0.9;
+  pointer-events: none;
+  will-change: transform;
+  transition: transform 0.3s ease;
+}
+
+.tech-title {
+  position: absolute;
+  bottom: 40px;
+  color: rgb(174, 174, 174);
+  font-size: 2.8rem;
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+  z-index: 2;
+  filter: drop-shadow(10 10 8px white);
+}
+
+
+/* Icons layout - no scrolling */
+.tech-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.tech-button {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background-color: #111;
+  padding: 0.7rem 1.2rem;
+  border-radius: 40px;
+  border: 1px solid #333;
+  transition: background 0.3s, transform 0.3s;
+  cursor: default;
+}
+
+.tech-button:hover {
+  background-color: #222;
+  transform: scale(1.05);
+}
+
+.tech-button img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.tech-button span {
+  font-size: 1rem;
+  font-family: 'Playfair Display', serif;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+
+
+
+/* ========== PLACEHOLDER SECTIONS ========== */
+.placeholder {
+  height: 450px;
+  background: #1e1e1e;
+  border-radius: 12px;
+  margin-top: 2rem;
+}
+
+/* ========== BACK BUTTON ========== */
+.back-button {
+  margin: 4rem 0;
+  text-align: center;
+}
+
+.back-button a {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: #ffffff;
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.back-button a:hover {
+  background: #8f2929;
+}

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>How I made this Website</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="website.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- HERO SECTION -->
+<section class="hero">
+  <div class="overlay"></div>
+  <div class="hero-text">
+    <h1>Website</h1>
+    <p>Project</p>
+  </div>
+</section>
+
+<!-- KEY FEATURES SECTION -->
+<section class="features" data-aos="fade-up">
+  <div class="hover-tip" id="hover-tip">
+    <span>Click/Hover on the text</span>
+  </div>  
+  <div class="features-content">
+    <div class="features-list-wrapper">
+      <h2>KEY FEATURES</h2>
+      <div class="divider"></div>
+      <ul class="features-list">
+        <li class="feature-item" data-image="sizes.png">Different interface for different size screens</li>
+        <li class="feature-item" data-image="get_in_touch.png">Get in touch</li>
+        <li class="feature-item" data-image="web_hosting.png">Web Hosting</li>
+        <li class="feature-item" data-image="pi.jpeg">Hosted on Raspberry Pi 3B with Flask &amp; Nginx</li>
+        <li class="feature-item" data-image="Nav.png">Easy to navigate</li>
+      </ul>
+    </div>
+    <div class="feature-preview-container">
+      <img id="feature-preview" src="" alt="Preview Image" />
+    </div>
+  </div>
+</section>
+
+
+<!-- ROTATING OBJECT SECTION 
+<section class="rotating-object" data-aos="fade-up">
+  <img src="object1.png" alt="3D Object" id="scroll-object">
+</section> -->
+
+<!-- TECH STACK -->
+<section class="tech-stack" id="tech-stack">
+  <div class="object-background">
+    <img src="object1.png" alt="3D Object" id="rotating-object">
+    <h2 class="tech-title" data-aos="fade-up">TECHNICAL STACK</h2>
+  </div>
+
+  <div class="tech-icons" data-aos="fade-up" data-aos-delay="300">
+    <div class="tech-button">
+      <img src="html.png" alt="HTML">
+      <span>HTML</span>
+    </div>
+    <div class="tech-button">
+      <img src="css.png" alt="CSS">
+      <span>CSS</span>
+    </div>
+    <div class="tech-button">
+      <img src="jss.png" alt="JavaScript">
+      <span>JavaScript</span>
+    </div>
+    <div class="tech-button">
+      <img src="python.png.png" alt="Python">
+      <span>Python</span>
+    </div>
+    <div class="tech-button">
+      <img src="debian.png.png" alt="Linux">
+      <span>Linux</span>
+    </div>
+  </div>
+  
+</section>
+
+
+<!-- ========== CHALLENGES SECTION ========== -->
+<section class="content-section" id="challenges" data-aos="fade-up">
+  <h2 class="section-title">CHALLENGES</h2>
+
+  <div class="inner-card">
+    <p>When I started building this website, I thought it would be simple—just HTML and CSS, right?</p>
+<br>
+    <p>But very quickly, I learned that designing and hosting a custom website from scratch is far from basic.</p>
+<br>
+    <p>The first real challenge was deciding on a layout that actually felt like me. 
+      <br> <p>I didn’t want a boring template or something bloated. I wanted a clean, minimal, and unique feel—something that truly represents who I am.</p>
+<br>
+    <p>Then came the actual implementation. Getting HTML, CSS, JavaScript, and all the media to play nicely together took more trial and error than I expected.</p>
+<br>
+    <p>Once that was done, I didn’t want it to just sit on my laptop. I wanted it live—accessible anywhere in the world.</p>
+<br>
+    <p>That opened a whole new rabbit hole: domain registration, static IP setup, configuring Nginx, setting up HTTPS with Certbot, and finally hosting it all on my Raspberry Pi.</p>
+<br>
+    <p>I had to deal with SSL errors, DNS propagation delays, port-forwarding complications, and a few late nights debugging why the site refused to load.</p>
+<br>
+    <p>But slowly, piece by piece, it came together. Every problem taught me something new, and by the end of it, I didn’t just have a website—I had a project I was proud of.</p>
+  </div>
+</section>
+
+
+
+<!-- ========== LEARNINGS SECTION ========== -->
+<section class="content-section" id="learnings" data-aos="fade-up">
+  <br>
+  <h2 class="section-title">LEARNINGS</h2>
+
+  <div class="inner-card">
+    <p>Now, after completing this, I have a better understanding of:</p>
+
+    <h3>Web & Networking</h3>
+    <ul>
+      <li><strong>Responsive Design</strong> — viewport scaling, mobile-first layouts, accessibility.</li>
+      <li><strong>Static Hosting</strong> — serving a fully static frontend with Nginx.</li>
+      <li><strong>DNS Configuration</strong> — pointing a domain (e.g., viratportfolio.com) to a home-hosted server.</li>
+      <li><strong>HTTPS with SSL</strong> — obtaining and renewing Let’s Encrypt certificates via Certbot.</li>
+    </ul>
+
+    <h3>Linux & Server Admin</h3>
+    <ul>
+      <li><strong>Nginx Configuration</strong> — editing <code>/etc/nginx/sites-available/</code> and enabling it properly.</li>
+      <li><strong>File Management</strong> — organizing media, scripts, and assets in clean directories.</li>
+      <li><strong>System Performance</strong> — tools like <code>htop</code>, <code>df -h</code>, and <code>journalctl</code> for monitoring.</li>
+      <li><strong>Startup Services</strong> — configuring <code>systemd</code> to auto-start Nginx and other components on boot.</li>
+    </ul>
+
+    <h3>Design & Development</h3>
+    <ul>
+      <li><strong>Minimal UI/UX</strong> — simplicity, spacing, contrast, and smooth navigation.</li>
+      <li><strong>AOS Animations</strong> — integrating scroll-based effects.</li>
+      <li><strong>Semantic HTML</strong> — proper tags for SEO and accessibility.</li>
+      <li><strong>Deployment Mindset</strong> — testing, debugging, and thinking like a user, not just a coder.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Back to Projects -->
+<div class="back-button">
+  <a href="index.html#projects">&larr; BACK TO PROJECTS</a>
+</div>
+
+
+<!-- Scripts -->
+ 
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  // Hover tip fade-out after 5 seconds
+/*setTimeout(() => {
+  const tip = document.getElementById('hover-tip');
+  if (tip) {
+    tip.style.opacity = '0';
+  }
+}, 2000);
+*/
+  // ================================
+  // Initialize AOS (Animate on Scroll)
+  // ================================
+  AOS.init({
+    once: false, // animations trigger every time on scroll
+    duration: 600, // default animation duration
+    offset: 120    // distance from trigger point
+  });
+
+  // ================================
+  // Hero Section Text Reveal (after overlay drops)
+  // ================================
+  document.querySelector('.overlay')?.addEventListener('animationend', () => {
+    document.querySelector('.hero-text')?.classList.add('show-text');
+  });
+
+  // ================================
+  // Key Features Image Preview on Hover
+  // ================================
+  const previewImg = document.getElementById('feature-preview');
+  document.querySelectorAll('.feature-item').forEach(item => {
+    item.addEventListener('mouseenter', () => {
+      previewImg.src = item.dataset.image;
+      previewImg.style.opacity = '1';
+    });
+    item.addEventListener('mouseleave', () => {
+      previewImg.style.opacity = '0';
+    });
+  });
+
+  // ================================
+  // Rotating 3D Object on Scroll
+  // (used in rotating-object section above tech stack)
+  // ================================
+  const objectImg = document.getElementById('rotating-object');
+  window.addEventListener('scroll', () => {
+    if (objectImg) {
+      const rotation = window.scrollY * 0.2; // smooth rotation multiplier
+      objectImg.style.transform = `rotate(${rotation}deg)`;
+    }
+  });
+</script>
+<!-- -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .button {
+      cursor: pointer;
+      border: none;
+      background: none;
+      color: #fff;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      overflow: hidden;
+      position: fixed; /* Changed to fixed to follow scroll */
+      top: 660px; /* Distance from top */
+      right: 20px; /* Distance from right */
+      z-index: 1000; /* Ensure it stays above other content */
+      display: grid;
+      place-content: center;
+      transition: background 300ms, transform 200ms;
+      font-weight: 600;
+    }
+
+    .button__text {
+      position: absolute;
+      inset: 0;
+      animation: text-rotation 8s linear infinite;
+    }
+
+    .button__text > span {
+      position: absolute;
+      transform: rotate(calc(19deg * var(--index)));
+      inset: 7px;
+    }
+
+    .button__circle {
+      position: relative;
+      width: 40px;
+      height: 40px;
+      overflow: hidden;
+      background: #fff;
+      color: #7808d0;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .button__icon--copy {
+      position: absolute;
+      transform: translate(-150%, 150%);
+    }
+
+    .button:hover {
+      background: none;
+      transform: scale(1.05);
+    }
+
+    .button:hover .button__icon {
+      color: #000;
+    }
+
+    .button:hover .button__icon:first-child {
+      transition: transform 0.3s ease-in-out;
+      transform: translate(150%, -150%);
+    }
+
+    .button:hover .button__icon--copy {
+      transition: transform 0.3s ease-in-out 0.1s;
+      transform: translate(0);
+    }
+
+    @keyframes text-rotation {
+      to {
+        rotate: 360deg;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="https://viratportfolio.com#contact" target="_blank">
+    <button class="button">
+      <p class="button__text">
+        <span style="--index: 0;">G</span>
+        <span style="--index: 1;">e</span>
+        <span style="--index: 2;">t</span>
+        <span style="--index: 3;"></span>
+        <span style="--index: 4;">i</span>
+        <span style="--index: 5;">n</span>
+        <span style="--index: 6;"></span>
+        <span style="--index: 7;">t</span>
+        <span style="--index: 8;">o</span>
+        <span style="--index: 9;">u</span>
+        <span style="--index: 10;">c</span>
+        <span style="--index: 11;">h</span>
+        <span style="--index: 12;"></span>
+        <span style="--index: 13;"></span>
+        <span style="--index: 14;"></span>
+        <span style="--index: 15;"></span>
+        <span style="--index: 16;"></span>
+        <span style="--index: 17;"></span>
+      </p>
+
+      <div class="button__circle">
+        <svg
+          viewBox="0 0 14 15"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="button__icon"
+          width="14"
+        >
+          <path
+            d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+            fill="currentColor"
+          ></path>
+        </svg>
+
+        <svg
+          viewBox="0 0 14 15"
+          fill="none"
+          width="14"
+          xmlns="http://www.w3.org/2000/svg"
+          class="button__icon button__icon--copy"
+        >
+          <path
+            d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+            fill="currentColor"
+          ></path>
+        </svg>
+      </div>
+    </button>
+  </a>
+</body>
+
+</html>
+
+</body>
+</html>

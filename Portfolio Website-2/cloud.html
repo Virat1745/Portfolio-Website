@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Secure Cloud Access | Virat Portfolio</title>
+  <link rel="icon" href="bluecloud.png" type="image/png">
+  <link rel="stylesheet" href="/cloud.css" />
+</head>
+<body>
+
+  <div class="notice-box">
+    <div class="notice-title">NOTICE</div>
+    <div class="notice-text">
+      If you are a Hiring Manager or Visitor, you have arrived at the incorrect page.<br>
+      This is my private cloud storage system. Please return to:
+      <a href="https://www.viratportfolio.com">www.viratportfolio.com</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="form_area">
+      <div class="title">Secure Cloud Login</div>
+
+      <form action="https://cloud.viratportfolio.com" method="POST">
+        <div class="form_group">
+          <label class="sub_title" for="email">Email Address</label>
+          <input type="email" id="email" name="email" class="form_style" required />
+        </div>
+
+        <div class="form_group">
+          <label class="sub_title" for="password">Password</label>
+          <input type="password" id="password" name="password" class="form_style" required />
+        </div>
+
+        <div class="form_group">
+          <label class="sub_title" for="pin">Security PIN (4 digits)</label>
+          <input type="password" id="pin" name="pin" class="form_style" minlength="4" maxlength="4" required />
+        </div>
+
+        <button type="submit" class="btn">LOGIN</button>
+      </form>
+
+      <p class="link">Authorized access only. All logins are monitored.</p>
+    </div>
+  </div>
+
+</body>
+</html>
